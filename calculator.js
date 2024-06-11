@@ -1,20 +1,27 @@
-const { Console } = require('console');
-const readline =  require('readline');
-const r1 = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+
+// const readline =  require('readline');
+// const r1 = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
 let x = 0;
 let y = 0;
 {
     let op = 0;
+    x = prompt("Enter First number: ");
+    y = prompt("Enter second number: ");
     while(op != 5)
         {
             op = Menu();
             if(op == 1)
                 {
                    Console.log("Your Sum is: "+ Add(x,y));
+                   prompt("Your Sum is: "+ Add(x,y));
                 }
+                if(op == 5)
+                    {
+                        break;
+                    }
         }
 }
 function Menu()
